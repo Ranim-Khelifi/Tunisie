@@ -1,0 +1,60 @@
+{
+"Feuil1":[
+ {
+  "Secteur": "IAA",
+  "Total adhésion": 737,
+  "Dossiers approuvés ": 623,
+  "Investissements en MD": 1780.946664,
+  "Prime octroyée en MD": 209.746014647
+ },
+ {
+  "Secteur": "ICC",
+  "Total adhésion": 329,
+  "Dossiers approuvés ": 305,
+  "Investissements en MD": 238.478536,
+  "Prime octroyée en MD": 36.084711166
+ },
+ {
+  "Secteur": "ICH",
+  "Total adhésion": 344,
+  "Dossiers approuvés ": 285,
+  "Investissements en MD": 827.891622,
+  "Prime octroyée en MD": 104.107818674
+ },
+ {
+  "Secteur": "ID",
+  "Total adhésion": 861,
+  "Dossiers approuvés ": 744,
+  "Investissements en MD": 1313.6217865,
+  "Prime octroyée en MD": 178.72198893400002
+ },
+ {
+  "Secteur": "IMCCV",
+  "Total adhésion": 334,
+  "Dossiers approuvés ": 282,
+  "Investissements en MD": 1622.957153,
+  "Prime octroyée en MD": 140.167051623
+ },
+ {
+  "Secteur": "IME",
+  "Total adhésion": 844,
+  "Dossiers approuvés ": 699,
+  "Investissements en MD": 1972.645588,
+  "Prime octroyée en MD": 277.30182248
+ },
+ {
+  "Secteur": "ITH",
+  "Total adhésion": 2486,
+  "Dossiers approuvés ": 2278,
+  "Investissements en MD": 1597.82176845,
+  "Prime octroyée en MD": 283.51411034299997
+ },
+ {
+  "Secteur": "IS",
+  "Total adhésion": 296,
+  "Dossiers approuvés ": 239,
+  "Investissements en MD": 163.909857,
+  "Prime octroyée en MD": 31.089853395
+ }
+]
+}

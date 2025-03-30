@@ -1,0 +1,60 @@
+{
+"Feuil1":[
+ {
+  "Secteur": "IAA",
+  "Adhesion": 14,
+  "Approbation": 11,
+  "Prime Totale": 3.879587,
+  "Invest Total": 30.939225
+ },
+ {
+  "Secteur": "ICC",
+  "Adhesion": 3,
+  "Approbation": 1,
+  "Prime Totale": 0.03599,
+  "Invest Total": 0.225497
+ },
+ {
+  "Secteur": "ICH",
+  "Adhesion": 12,
+  "Approbation": 4,
+  "Prime Totale": 1.431061,
+  "Invest Total": 8.227428
+ },
+ {
+  "Secteur": "ID",
+  "Adhesion": 30,
+  "Approbation": 21,
+  "Prime Totale": 7.226319,
+  "Invest Total": 45.285118
+ },
+ {
+  "Secteur": "IMCCV",
+  "Adhesion": 7,
+  "Approbation": 15,
+  "Prime Totale": 5.114597,
+  "Invest Total": 71.65989
+ },
+ {
+  "Secteur": "IME",
+  "Adhesion": 28,
+  "Approbation": 24,
+  "Prime Totale": 10.023075,
+  "Invest Total": 57.099544
+ },
+ {
+  "Secteur": "ITH",
+  "Adhesion": 49,
+  "Approbation": 33,
+  "Prime Totale": 6.528066,
+  "Invest Total": 37.803571
+ },
+ {
+  "Secteur": "IS",
+  "Adhesion": 9,
+  "Approbation": 2,
+  "Prime Totale": 0.157556,
+  "Invest Total": 1.515722
+ }
+]
+}
