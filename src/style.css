@@ -1,0 +1,275 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+#map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1300px; /* Augmenté pour s'adapter */
+    margin: 0 auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
+    transition: box-shadow 0.3s ease; /* Animation fluide */
+}
+
+#map-container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Effet au survol */
+}
+
+#title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-size: 1.8em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+#map {
+    width: 100%;
+    height: 600px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 
+        0 2px 4px rgba(0,0,0,0.1),
+        0 4px 8px rgba(0,0,0,0.1); /* Double ombre pour plus de profondeur */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#map:hover {
+    box-shadow: 
+        0 4px 8px rgba(0,0,0,0.15),
+        0 8px 16px rgba(0,0,0,0.15); /* Effet plus marqué au survol */
+    border-color: #d0d0d0;
+}
+
+#legend {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#legend:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.tooltip {
+    position: absolute;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    border-radius: 6px;
+    pointer-events: none;
+    font-size: 11px;
+    max-width: 350px;
+    line-height: 1.5;
+    box-shadow: 
+        0 5px 15px rgba(0,0,0,0.3),
+        0 0 0 1px rgba(255,255,255,0.1); /* Bordure lumineuse subtile */
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: translateY(10px);
+}
+
+.tooltip.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/*coueur jaune de legendre*/
+.tooltip strong {
+    color: #f1c40f;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.region {
+    stroke: white;
+    stroke-width: 1px;
+    transition: stroke-width 0.2s ease;
+}
+
+.region:hover {
+    stroke-width: 2px;
+    filter: brightness(1.05); /* Légère illumination */
+}
+/* Boutons de zoom */
+button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+button:hover {
+    background-color: #0d47a1;
+    transform: scale(1.05);
+}
+
+/* Carte */
+#map {
+    border: 1px solid #ccc;
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+#map:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+/* Éléments vectoriels */
+.region, .region-label {
+    vector-effect: non-scaling-stroke;
+}
+
+/* Styles des zones industrielles */
+.zone-industrielle {
+    fill-opacity: 0.8;
+    transition: r 0.2s ease;
+}
+
+/* Légendes */
+.legend-section {
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 5px;
+    min-width: 200px;
+}
+
+.legend-section h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #495057;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 5px;
+}
+
+/* Contrôles de zoom */
+.zoom-controls button {
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+}
+
+.zoom-controls button:hover {
+    background: #0d47a1;
+}
+
+/* Tooltip amélioré */
+.tooltip {
+    background: rgba(0,0,0,0.9);
+    color: white;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    max-width: 300px;
+    pointer-events: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+.collecte-point {
+    fill: #00008B;
+    stroke: white;
+    stroke-width: 1px;
+    transition: r 0.2s ease, fill 0.2s ease;
+}
+
+.collecte-point:hover {
+    fill: #1a237e;
+    stroke-width: 1.5px;
+}
+.region-label {
+    font-family: 'Segoe UI', sans-serif;
+    transition: font-size 0.2s ease;
+}
+
+/* Adaptation de la taille des labels au zoom */
+g.transform .region-label {
+    font-size: calc(10px / var(--scale, 1));
+}
+.lac-point {
+    fill: #4682B4;
+    stroke: white;
+    stroke-width: 1px;
+    transition: all 0.2s ease;
+}
+
+.lac-point:hover {
+    fill: #5F9EA0; /* Bleu plus clair au survol */
+    stroke-width: 1.5px;
+}
+/*stat*/
+#statistics {
+    font-family: Arial, sans-serif;
+}
+
+#statistics table {
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.bar:hover {
+    opacity: 0.8;
+}
+
+/* statt*/
+#statistics {
+    margin: 20px;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.bar {
+    transition: fill 0.2s;
+}
+
+.bar:hover {
+    fill: #808080;
+}
+
+.axis-x text {
+    font-size: 12px;
+}
+
+.axis-y text {
+    font-size: 12px;
+}
+#statistics svg {
+    display: block;
+    margin: 0 auto;
+}
+
+.dynamic-legend {
+    font-size: 12px;
+    fill: #333;
+}
+
+
+
