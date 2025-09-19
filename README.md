@@ -18,7 +18,7 @@ The goal is to provide a **clear and interactive view** of Tunisia’s economic 
 ## Technologies  
 - **D3.js** (interactive visualization and mapping)  
 - **JavaScript, HTML, CSS**  
-- **CodePen / GitHub Pages** for online deployment  
+- **CodePen** for online deployment  
 
 
 ## Key Features  
